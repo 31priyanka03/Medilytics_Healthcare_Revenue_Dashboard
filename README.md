@@ -46,7 +46,7 @@ Identifies irregular patterns in claim data for further investigation.
 ## **🚀 How to Run**
 
 streamlit run app.py
-[Click here to watch the project](./C:\Users\priya\OneDrive\Desktop\Project_ideo.mp4)
+[Click here to watch the project](./C:/Users/priya/OneDrive/Desktop/Project_ideo.mp4)
 
 ## **Objective**
 
