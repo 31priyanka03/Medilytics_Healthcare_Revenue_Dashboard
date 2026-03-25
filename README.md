@@ -1,206 +1,61 @@
-# Medilytics — Healthcare Revenue Intelligence Dashboard
+# **Medilytics_Healthcare_Revenue_Dashboard**
 
-A multi-role, interactive healthcare revenue analytics dashboard built with Streamlit, Plotly, and Pandas. Provides real-time insights into revenue leakage, claim denial risk, billing anomalies, and financial forecasting across hospital departments.
+## **Medilytics – Healthcare Revenue Intelligence Dashboard**
 
----
+Medilytics is a data-driven healthcare analytics dashboard developed to enhance financial visibility and optimize revenue cycle management in hospital systems. Built using Streamlit, the platform provides a centralized and interactive interface for analyzing insurance claim data and identifying revenue inefficiencies.
 
-## Table of Contents
+This project was developed during my **Infosys Springboard Internship**, focusing on applying data analytics, machine learning, and data visualization to solve real-world healthcare revenue management challenges.
 
-* Overview
-* Features
-* Project Structure
-* Installation
-* Running the App
-* User Roles & Login Credentials
-* Dashboard Pages
-* Data Files
-* Tech Stack
-* Key Business Insights
+The system addresses the gap between expected and realized revenue by tracking the complete lifecycle of insurance claims. It enables stakeholders to monitor key financial indicators, detect operational bottlenecks, and make informed decisions using actionable insights.
 
----
+Medilytics integrates analytics and machine learning techniques to support claim risk assessment, revenue forecasting, and anomaly detection—shifting hospital financial management from reactive reporting to proactive control.
 
-## Overview
+## **Key Features**
 
-Medilytics is a healthcare revenue cycle management (RCM) intelligence platform designed for hospital finance teams.
+* End-to-end monitoring of revenue from billing to final settlement
+* Identification and analysis of revenue leakage across departments
+* Predictive modeling for claim denial risk assessment
+* Time-series forecasting of future revenue trends
+* Detection of anomalous billing patterns
+* Interactive dashboard with dynamic filtering and visualization
 
-It provides role-based access to CFOs, RCM analysts, department heads, and insurance teams so each user sees only relevant data.
+## **System Modules**
 
-The platform analyzes 60,000+ claim records across departments (Cardiology, Neurology, Orthopedics, Emergency Medicine) and multiple insurance types.
+**Revenue Integrity Monitoring**
+Tracks discrepancies between expected and actual revenue to identify leakage points.
 
-### Key Insights Generated:
+**Claim Denial Risk Prediction**
+Applies machine learning models to estimate the probability of claim rejection.
 
-* Revenue leakage points
-* High-risk claim denial patterns
-* Billing anomalies in the system
-* Revenue forecast for next 6 months
+**Revenue Forecasting Engine**
+Utilizes time-series methods to project future revenue performance.
 
----
+**Billing Anomaly Detection**
+Identifies irregular patterns in claim data for further investigation.
 
-## Features
 
-* Role-Based Access Control (4 user roles)
-* 7 Analytics Pages (end-to-end workflow)
-* Executive Overview Dashboard
-* Revenue Leakage Analysis
-* Claim Denial Prediction (Logistic Regression)
-* Billing Anomaly Detection (Z-score method)
-* Revenue Forecasting (ARIMA model)
-* Insurance Analytics Dashboard
-* PDF Export functionality
+## **Technology Stack**
 
----
+* Python — Core development
+* Pandas, NumPy — Data processing and analysis
+* Scikit-learn — Machine learning models
+* Statsmodels — Time-series forecasting
+* Streamlit — Dashboard development
 
-## Project Structure
 
-```
-medilytics/
-│── app.py                  # Entry point
-│── login.py                # Authentication system
-│── sidebar.py             # Navigation UI
-│── chart_config.py        # Chart settings
-│── pdf_export.py          # Export reports
+## **🚀 How to Run**
 
-│── Executive_Dashboard.py
-│── Revenue_Leakage_Analysis.py
-│── Claim_Denial_main.py
-│── billing_anomaly.py
-│── forecast_dashboard.py
-│── cfo_strategic.py
-│── insurance_view.py
-
-│── style.css
-
-│── data/
-│   ├── modified_dataset.csv
-│   ├── pre_processed_data.csv
-│   ├── denial_model_predictions.csv
-│   ├── monthly_revenue_history.csv
-│   └── revenue_forecast.csv
-```
-
----
-
-## Installation
-
-### Prerequisites
-
-* Python 3.9+
-* pip
-
-### Steps
-
-```bash
-git clone https://github.com/RagzTechie/Medilytics_dashboard.git
-cd Medilytics_dashboard
-pip install -r requirements.txt
-```
-
----
-
-## Running the App
-
-```bash
 streamlit run app.py
-```
 
-Open in browser:
-http://localhost:8501
+## **Objective**
 
----
+Leverage data analytics and machine learning to improve healthcare revenue management by identifying inefficiencies, predicting risks, and enabling data-driven financial decision-making.
 
-## User Roles & Login Credentials
+## **Outcome**
 
-| Username       | Role      | Access          |
-| -------------- | --------- | --------------- |
-| Rahul Sharma   | CFO       | Full Access     |
-| Anita Verma    | RCM       | Analytics Pages |
-| Dr Kiran Reddy | Dept Head | Department Only |
+Medilytics demonstrates the practical application of analytics in healthcare by:
 
----
-
-## Dashboard Pages
-
-### Executive Overview
-
-* High-level revenue summary
-* KPIs: Total Revenue, Leakage, Approval Rate
-
-### Revenue Leakage Analysis
-
-* Gap between expected vs actual revenue
-* Leakage Index and Risk metrics
-
-### Claim Denial Prediction
-
-* Logistic Regression model
-* ROC-AUC: 0.66
-
-### Billing Anomaly Detection
-
-* Z-score anomaly detection
-* Flags abnormal claims
-
-### Revenue Forecasting
-
-* ARIMA model
-* 6-month prediction
-
-### Insurance Analytics
-
-* Payer performance comparison
-* Denial rates & revenue contribution
-
----
-
-## Data Files
-
-| File                         | Description        |
-| ---------------------------- | ------------------ |
-| modified_dataset.csv         | Raw claim data     |
-| pre_processed_data.csv       | Cleaned data       |
-| denial_model_predictions.csv | ML predictions     |
-| monthly_revenue_history.csv  | Historical revenue |
-| revenue_forecast.csv         | Forecast output    |
-
----
-
-## Tech Stack
-
-| Layer       | Technology          |
-| ----------- | ------------------- |
-| Frontend    | Streamlit           |
-| Charts      | Plotly              |
-| Data        | Pandas, NumPy       |
-| ML Model    | Scikit-learn        |
-| Forecasting | Statsmodels (ARIMA) |
-
----
-
-## Key Business Insights
-
-* ₹46.85 Cr revenue leakage detected
-* 98.4% collection rate
-* Government insurance has highest denial rate (26.7%)
-* Self-pay has lowest denial rate
-
----
-
-## Notes
-
-* Runs fully offline (no APIs)
-* Demo login system (CSV-based)
-* Data is pre-processed (no real-time updates)
-
----
-
-## Objective
-
-To leverage machine learning and analytics for improving healthcare revenue efficiency.
-
----
-
-## Outcome
-
-* Reduced claim denial risk
-* Improved revenue transparency
-* Enabled data-driven decisions
+* Reducing claim denial rates
+* Improving reimbursement cycle efficiency
+* Enhancing transparency in financial operations
+* Enabling proactive identification of revenue leakage
